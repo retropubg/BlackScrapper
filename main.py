@@ -13,7 +13,7 @@ phone_number = env['phone_number']
 
 client = TelegramClient('black_scrapper', api_id, api_hash)
 
-BIN_API_URL = 'https://bins.antipublic.cc/bins/{}'
+BIN_API_URL = 'https://jetixchecker.com/v1/bin/{}'
 
 # Function to filter card information using regex
 def filter_cards(text):
