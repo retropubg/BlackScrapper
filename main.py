@@ -7,9 +7,9 @@ import asyncio
 from dotenv import dotenv_values
 
 env = dotenv_values(".env")
-api_id = env['api_id']
-api_hash = env['api_hash']
-phone_number = env['phone_number']
+api_id = env['26043952']
+api_hash = env['96b8dea447ef580b5b75b01ccc3ab710']
+phone_number = env['+18298796723']
 
 client = TelegramClient('black_scrapper', api_id, api_hash)
 
