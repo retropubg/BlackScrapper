@@ -8,9 +8,9 @@ import asyncio
 # Definir directamente las credenciales
 api_id = "16923186"
 api_hash = "b6939f5a4d4caa1633a513a2adfd7d4d"
-session_string = "1AZWarzIAUG--ACsjPCohiwENNODFKeZGLb6mSfBhfXEbNiHBuiVIFCUakK4tRUv1bMAUC2KD7IgzzEhI-5blzc1wAmKjL5tT2bhmob7O5TGECH2PW2ZyXo8ISbA5fPtZ9dmgWAeXZSm8eZPhymKjgfFYbDfbeOptAmIoUV6M22jJmENbAy9QmJRRsOS-36E2UdGgX7_GL1jqc2vLO_elGDEE9MGD3JJQfNWWtGaiAf7vMu6xij84MQlsW65A4Ycx_IEtxcesRZmZsA1lPRJKb4AZ86ka68e47e1yz3inmxTHfKbPOlsX3uxhYh1yfe_yKLN9_5VE023_44Ptyw3HemEaWmY_aPI="  # Pega aquí tu sesión string
+session_name = "AQECOjIAb74AKyM8KiGLAQ004MUp5kYtvqZJ8GF9cRs2IcG6JUgUJRqQri1FS_VswBQLYoPsiDPMSEj7luXNzXACYqMvm1PZuGahvs7lMYQIfY9bZnJejwhJsDl8-1n12aBYB5dlKbx5k-HKYqOB8VhsN9t46m0CYihRXozbaMmYQ1sDL1CYlFGw5L7foTZR0aBfv8YvWOpza8s796UYMQT0wYPcklB81Za0ZqIB_u8y7rGKPzgxCWxbrkDhhzH8gS3Fx6xFmZmwDWU9EkpvgBnzqRrrx7jt7XLPeKebFMd8ps86Wxfe7GFiHXJ97_Ios33_lUTTbf_jg-3LDcd6YRpaZj9o8gAAAAHEU4syAA"  # Aquí va el nombre de la sesión, por ejemplo 'mi_sesion'
 
-client = TelegramClient(session_string, api_id, api_hash)
+client = TelegramClient(retrolog, api_id, api_hash)
 
 BIN_API_URL = 'https://jetixchecker.com/v1/bin/{}'
 
