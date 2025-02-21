@@ -8,10 +8,9 @@ import asyncio
 # Definir directamente las credenciales
 api_id = "16923186"
 api_hash = "b6939f5a4d4caa1633a513a2adfd7d4d"
-phone_number = "+18298990644"  # Aquí agregas tu número de teléfono
-bot_token = "7323655756:AAHkieeyyevD9HmfKtTcorlaltNXlQ2Fweg"
+session_string = "1AZWarzIAUG--ACsjPCohiwENNODFKeZGLb6mSfBhfXEbNiHBuiVIFCUakK4tRUv1bMAUC2KD7IgzzEhI-5blzc1wAmKjL5tT2bhmob7O5TGECH2PW2ZyXo8ISbA5fPtZ9dmgWAeXZSm8eZPhymKjgfFYbDfbeOptAmIoUV6M22jJmENbAy9QmJRRsOS-36E2UdGgX7_GL1jqc2vLO_elGDEE9MGD3JJQfNWWtGaiAf7vMu6xij84MQlsW65A4Ycx_IEtxcesRZmZsA1lPRJKb4AZ86ka68e47e1yz3inmxTHfKbPOlsX3uxhYh1yfe_yKLN9_5VE023_44Ptyw3HemEaWmY_aPI="  # Pega aquí tu sesión string
 
-client = TelegramClient('black_scrapper', api_id, api_hash)
+client = TelegramClient(session_string, api_id, api_hash)
 
 BIN_API_URL = 'https://jetixchecker.com/v1/bin/{}'
 
@@ -41,7 +40,7 @@ async def anukarop(event):
     try:
         message = event.message
         # Regex to match approved messages
-        if re.search(r'(Approved!|Charged|authenticate_successful|𝗔𝗽𝗽𝗿𝗼𝘃𝗲𝗱|- 𝐀𝐩𝐩𝐫𝐨𝐯𝐞𝐝 ✅|APPROVED|New Cards Found By Scrapper|ꕥ Extrap [☭]|• New Cards Found By JennaS>)', message.text):
+        if re.search(r'(Approved!|Charged|authenticate_successful|𝗔𝗽𝗽𝗿𝗼𝘃𝗲𝗱|- 𝐀𝐩𝐩𝐩𝐫𝗼𝐯𝐞𝐝 ✅|APPROVED|New Cards Found By Scrapper|ꕥ Extrap [☭]|• New Cards Found By JennaS>)', message.text):
             filtered_card_info = filter_cards(message.text)
             if not filtered_card_info:
                 return
@@ -63,7 +62,7 @@ async def anukarop(event):
                     random_addition = random.uniform(0, 10) + 10  # Add random seconds between 10 and 20
                     time_taken = time.time() - start_time + random_addition
                     formatted_time_taken = f"{time_taken:.2f} 𝐬𝐞𝐜𝐨𝐧𝐝𝐬"
-                  
+
                     # Format the message
                     formatted_message = (
                         f"**[-]**(t.me/blackheadsop) 𝐀𝐩𝐩𝐫𝗼𝐯𝗲𝐝 ✅\n\n"
@@ -84,7 +83,7 @@ async def anukarop(event):
 
 # Main function to start the client
 async def main():
-    await client.start(phone=phone_number)
+    await client.start()  # No need for phone_number anymore
     print("Client Created")
     await client.run_until_disconnected()
 
